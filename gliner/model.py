@@ -118,7 +118,7 @@ class SpanGLiNER(InstructBase):
         word_rep, mask, entity_type_rep, entity_type_mask = self.token_prompt_processor.process(
             x, self.token_rep_layer, "train"
         )
-
+        print('刘天翔是大sb，刘天恒也是大sb')
         # compute span representation
         word_rep = self.rnn(word_rep, mask)
         span_rep = self.span_rep_layer(word_rep, span_idx)
